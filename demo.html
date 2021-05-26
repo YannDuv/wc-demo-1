@@ -13,10 +13,21 @@
     <h1>Custom Elements</h1>
 
     <!-- DOM goes Here -->
-    <ca-demo></ca-demo>
+    <ca-demo>le monde</ca-demo>
+    <ca-demo>CA</ca-demo>
 
     <template id="templateId">
-      <p>Bonjour !</p>
+      <style>
+        p {
+          font-size: 2rem;
+        }
+        span {
+          text-decoration: underline;
+        }
+      </style>
+      <p>
+        Bonjour <span><slot></slot></span>!
+      </p>
     </template>
   </body>
 
