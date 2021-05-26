@@ -1,0 +1,29 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: #e5e5f7;
+}
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  background: rgba(218, 252, 216, 0.2);
+  background-image: linear-gradient(
+      135deg,
+      rgba(41, 143, 23, 0.2) 25%,
+      transparent 25%
+    ),
+    linear-gradient(225deg, rgba(41, 143, 23, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(41, 143, 23, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(41, 143, 23, 0.2) 25%, rgb(218, 252, 216) 25%);
+  background-position: 15px 0px, 15px 0px, 0px 0px, 0px 0px;
+  background-size: 30px 30px;
+  background-repeat: repeat;
+  padding: 1em;
+}
+
+h1 {
+  color: #2d3a2d;
+}
