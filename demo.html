@@ -13,9 +13,23 @@
     <h1>Custom Elements</h1>
 
     <!-- DOM goes Here -->
+    <ca-demo></ca-demo>
   </body>
 
   <script type="module">
     // Script goes here
+    customElements.define(
+      "ca-demo",
+      class CaDemo extends HTMLElement {
+        constructor() {
+          super();
+          this.attachShadow({ mode: "open" });
+
+          const element = document.createElement("p");
+          element.textContent = "Salut !";
+          this.shadowRoot.append(element);
+        }
+      }
+    );
   </script>
 </html>
