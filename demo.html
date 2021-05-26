@@ -14,6 +14,10 @@
 
     <!-- DOM goes Here -->
     <ca-demo></ca-demo>
+
+    <template id="templateId">
+      <p>Bonjour !</p>
+    </template>
   </body>
 
   <script type="module">
@@ -25,9 +29,8 @@
           super();
           this.attachShadow({ mode: "open" });
 
-          const element = document.createElement("p");
-          element.textContent = "Salut !";
-          this.shadowRoot.append(element);
+          const element = document.querySelector("#templateId");
+          this.shadowRoot.appendChild(element.content.cloneNode(true));
         }
       }
     );
